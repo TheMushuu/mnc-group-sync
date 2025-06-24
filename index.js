@@ -14,8 +14,8 @@ async function fetchGroupMembers() {
 
     data.data.forEach(user => {
       members.push({
-        userId: user.userId,
-        username: user.username
+        userId: user.user.id,
+        username: user.user.name
       });
     });
 
