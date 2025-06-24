@@ -11,6 +11,7 @@ async function fetchGroupMembers() {
     const url = `https://groups.roblox.com/v1/groups/${GROUP_ID}/users?limit=100&sortOrder=Asc${cursor ? `&cursor=${cursor}` : ""}`;
     const res = await axios.get(url);
     const data = res.data;
+    console.log(JSON.stringify(res.data, null, 2));
 
     data.data.forEach(user => {
       members.push({
